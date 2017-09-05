@@ -65,3 +65,60 @@ $dispatcher = $factory->getDispatcher();
 $dispatcher->attachListener('event.simple.object', [$foo, 'dummyResolver'], 20);
 $dispatcher->dispatch('event.simple.object');
 ```
+
+## Resolving subscribed events
+
+```php
+use Gandung\EventDispatcher\EventDispatcherFactory;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+class FooSubscriber implements EventSubscriberInterface
+{
+	public static function getSubscribedEvents()
+	{
+		return [
+			'event.simple.prioritized' => [
+				['dummyResolver1', 20],
+				['dummyResolver2', 10],
+				['dummyResolver3', -90]
+			],
+			'event.simple.unprioritized' => [
+				'unprioritizedResolver'
+			],
+			'event.simple.single' => 'singleResolver'
+		];
+	}
+
+	public function dummyResolver1()
+	{
+		echo sprintf("{%s@%s}\n", \spl_object_hash($this), __METHOD__);
+	}
+
+	public function dummyResolver2()
+	{
+		echo sprintf("{%s@%s}\n", \spl_object_hash($this), __METHOD__);
+	}
+
+	public function dummyResolver3()
+	{
+		echo sprintf("{%s@%s}\n", \spl_object_hash($this), __METHOD__);
+	}
+
+	public function unprioritizedResolver()
+	{
+		echo sprintf("{%s@%s}\n", \spl_object_hash($this), __METHOD__);
+	}
+
+	public function singleResolver()
+	{
+		echo sprintf("{%s@%s}\n", \spl_object_hash($this), __METHOD__);
+	}
+}
+
+$subscriber = new FooSubscriber;
+$factory = new EventDispatcherFactory();
+$dispatcher->attachSubscriber($subscriber);
+$dispatcher->dispatch('event.simple.prioritized');
+$dispatcher->dispatch('event.simple.unprioritized');
+$dispatcher->dispatch('event.simple.single');
+```
