@@ -149,9 +149,9 @@ Description:
 Append listener handler to specified event.
 
 Parameter:
-	- $event: Event name
-	- $listener: Listener handler
-	- $priority (optional): Event priority (default to 0)
+$event: Event name
+$listener: Listener handler
+$priority (optional): Event priority (default to 0)
 
 Return Value:
 none
@@ -162,8 +162,8 @@ Description:
 Remove listener handler to specified event.
 
 Parameter:
-	- $event: Event name
-	- $listener: Listener handler
+$event: Event name
+$listener: Listener handler
 
 Return Value:
 none
@@ -175,7 +175,7 @@ Description:
 Get listener that bind on specified event.
 
 Parameter:
-	- $event (optional): Event name (default to null)
+$event (optional): Event name (default to null)
 
 Return Value:
 Array of listeners or single listener
@@ -187,7 +187,7 @@ Description:
 Determine if specified event name has listeners.
 
 Parameter:
-	- $event (optional): Event name (default to null)
+$event (optional): Event name (default to null)
 
 Return Value:
 ```true``` if specified event has any listener/listeners on it, ```false``` otherwise
@@ -199,9 +199,9 @@ Description:
 Set event listener priority.
 
 Parameter:
-	- $event: Event name
-	- $listener: Listener (callback/object)
-	- $priority: Event priority
+$event: Event name
+$listener: Listener (callback/object)
+$priority: Event priority
 
 Return Value:
 none
@@ -213,8 +213,8 @@ Description:
 Get event listener priority.
 
 Parameter:
-	- $event: Event name
-	- $listener: Listener (callback/object)
+$event: Event name
+$listener: Listener (callback/object)
 
 Return Value:
 Event listener priority, null otherwise.
@@ -226,7 +226,7 @@ Description:
 Register event subscriber.
 
 Parameter:
-	- Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
+Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
 
 Return Value
 none
@@ -238,7 +238,7 @@ Description:
 Remove event subscriber.
 
 Parameter:
-	- Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
+Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
 
 Return Value:
 none
@@ -250,8 +250,8 @@ Description:
 Dispatch the specified event.
 
 Parameter:
-	- $event: Event name
-	- Gandung\EventDispatcher\Event $eventHandler (optional): Event handler (default to null)
+$event: Event name
+Gandung\EventDispatcher\Event $eventHandler (optional): Event handler (default to null)
 
 Return Value:
 An instance of Gandung\EventDispatcher\Event.
