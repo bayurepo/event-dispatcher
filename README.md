@@ -167,3 +167,50 @@ Parameter:
 
 Return Value:
 none
+
+```getListeners($event = null)```
+
+Description:
+Get listener that bind on specified event.
+
+Parameter:
+	- $event (optional): Event name (default to null)
+
+Return Value:
+Array of listeners or single listener
+
+```hasListeners($event = null)```
+
+Description:
+Determine if specified event name has listeners.
+
+Parameter:
+	- $event (optional): Event name (default to null)
+
+Return Value:
+```true``` if specified event has any listener/listeners on it, ```false``` otherwise
+
+```setListenerPriority($event, $listener, $priority)```
+
+Description:
+Set event listener priority.
+
+Parameter:
+	- $event: Event name
+	- $listener: Listener (callback/object)
+	- $priority: Event priority
+
+Return Value:
+none
+
+```getListenerPriority($event, $listener)```
+
+Description:
+Get event listener priority.
+
+Parameter:
+	- $event: Event name
+	- $listener: Listener (callback/object)
+
+Return Value:
+Event listener priority, null otherwise.
