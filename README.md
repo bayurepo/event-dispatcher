@@ -12,6 +12,7 @@ This event dispatcher library uses several design patterns for extendibility and
 - [Quick Start](#quick-start)
 - [API](#api)
 	- [EventDispatcherFactory](#eventdispatcherfactory)
+	- [EventDispatcher](#eventdispatcher)
 
 # Quick Start
 
@@ -131,4 +132,38 @@ $dispatcher->dispatch('event.simple.single');
 
 ```getDispatcher()```
 
+Description:
 Return the EventDispatcher object instance.
+
+Parameter:
+none
+
+Return Value:
+An 'EventDispatcher' object instance.
+
+## EventDispatcher
+
+```attachListener($event, $listener, $priority = 0)```
+
+Description:
+Append listener handler to specified event.
+
+Parameter:
+	- $event: Event name
+	- $listener: Listener handler
+	- $priority (optional): Event priority (default to 0)
+
+Return Value:
+none
+
+```detachListener($event, $listener)```
+
+Description:
+Remove listener handler to specified event.
+
+Parameter:
+	- $event: Event name
+	- $listener: Listener handler
+
+Return Value:
+none
