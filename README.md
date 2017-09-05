@@ -11,7 +11,7 @@ This event dispatcher library uses several design patterns for extendibility and
 
 - [Quick Start](#quick-start)
 - [API](#api)
-	- [Event Dispatcher Factory](#event-dispatcher-factory)
+	- [EventDispatcherFactory](#eventdispatcherfactory)
 
 # Quick Start
 
@@ -127,7 +127,7 @@ $dispatcher->dispatch('event.simple.single');
 
 # API
 
-## Event Dispatcher Factory
+## EventDispatcherFactory
 
 ```getDispatcher()```
 
