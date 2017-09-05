@@ -10,6 +10,8 @@ This event dispatcher library uses several design patterns for extendibility and
 # Table Of Content
 
 - [Quick Start](#quick-start)
+- [API](#api)
+	- [EventDispatcherFactory](#event-dispatcher-factory)
 
 # Quick Start
 
@@ -122,3 +124,11 @@ $dispatcher->dispatch('event.simple.prioritized');
 $dispatcher->dispatch('event.simple.unprioritized');
 $dispatcher->dispatch('event.simple.single');
 ```
+
+# API
+
+## EventDispatcherFactory
+
+```getDispatcher()```
+
+Return the EventDispatcher object instance.
