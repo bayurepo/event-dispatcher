@@ -127,7 +127,7 @@ $dispatcher->dispatch('event.simple.single');
 
 # API
 
-## EventDispatcherFactory
+## Event Dispatcher Factory
 
 ```getDispatcher()```
 
