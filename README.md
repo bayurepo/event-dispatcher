@@ -11,7 +11,7 @@ This event dispatcher library uses several design patterns for extendibility and
 
 - [Quick Start](#quick-start)
 - [API](#api)
-	- [EventDispatcherFactory](#event-dispatcher-factory)
+	- [Event Dispatcher Factory](#event-dispatcher-factory)
 
 # Quick Start
 
