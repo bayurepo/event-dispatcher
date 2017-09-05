@@ -168,6 +168,7 @@ Parameter:
 Return Value:
 none
 
+
 ```getListeners($event = null)```
 
 Description:
@@ -179,6 +180,7 @@ Parameter:
 Return Value:
 Array of listeners or single listener
 
+
 ```hasListeners($event = null)```
 
 Description:
@@ -189,6 +191,7 @@ Parameter:
 
 Return Value:
 ```true``` if specified event has any listener/listeners on it, ```false``` otherwise
+
 
 ```setListenerPriority($event, $listener, $priority)```
 
@@ -203,6 +206,7 @@ Parameter:
 Return Value:
 none
 
+
 ```getListenerPriority($event, $listener)```
 
 Description:
@@ -214,3 +218,40 @@ Parameter:
 
 Return Value:
 Event listener priority, null otherwise.
+
+
+```attachSubscriber(EventSubscriberInterface $subscriber)```
+
+Description:
+Register event subscriber.
+
+Parameter:
+	- Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
+
+Return Value
+none
+
+
+```detachSubscriber(EventSubscriberInterface $subscriber)```
+
+Description:
+Remove event subscriber.
+
+Parameter:
+	- Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
+
+Return Value:
+none
+
+
+```dispatch($event, Event $eventHandler = null)```
+
+Description:
+Dispatch the specified event.
+
+Parameter:
+	- $event: Event name
+	- Gandung\EventDispatcher\Event $eventHandler (optional): Event handler (default to null)
+
+Return Value:
+An instance of Gandung\EventDispatcher\Event.
