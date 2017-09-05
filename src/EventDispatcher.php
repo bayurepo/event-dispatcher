@@ -83,7 +83,6 @@ class EventDispatcher implements EventDispatcherInterface
             return;
         }
 
-        $current = $this->container[$event];
         $this->detachListener($event, $listener);
         $q = new Listener;
         $q->setListener($listener);
