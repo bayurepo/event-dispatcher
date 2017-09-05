@@ -2,6 +2,7 @@
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
 [![Build status](https://ci.appveyor.com/api/projects/status/x2lpslcte50kqjgg?svg=true)](https://ci.appveyor.com/project/plvhx/event-dispatcher)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c70cd8ba-d9ef-40d1-8168-f09ad8e2d5f6/mini.png)](https://insight.sensiolabs.com/projects/c70cd8ba-d9ef-40d1-8168-f09ad8e2d5f6)
 
 This is a simple library for managing event (e.g, http-kernel event, exception event) which utilizes [Symfony event dispatcher class interface](http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcherInterface.html) as event dispatcher object and [Symfony event subscriber class interface](http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) as event subscriber (or listener collection) for current event dispatcher object.
 
