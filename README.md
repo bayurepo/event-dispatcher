@@ -132,100 +132,100 @@ $dispatcher->dispatch('event.simple.single');
 
 ```getDispatcher()```
 
-Description:
+Description
 Return the EventDispatcher object instance.
 
-Parameter:
+Parameter
 none
 
-Return Value:
+Return Value
 An 'EventDispatcher' object instance.
 
 ## EventDispatcher
 
 ```attachListener($event, $listener, $priority = 0)```
 
-Description:
+Description
 Append listener handler to specified event.
 
-Parameter:
+Parameter
 $event: Event name
 $listener: Listener handler
 $priority (optional): Event priority (default to 0)
 
-Return Value:
+Return Value
 none
 
 ```detachListener($event, $listener)```
 
-Description:
+Description
 Remove listener handler to specified event.
 
-Parameter:
+Parameter
 $event: Event name
 $listener: Listener handler
 
-Return Value:
+Return Value
 none
 
 
 ```getListeners($event = null)```
 
-Description:
+Description
 Get listener that bind on specified event.
 
-Parameter:
+Parameter
 $event (optional): Event name (default to null)
 
-Return Value:
+Return Value
 Array of listeners or single listener
 
 
 ```hasListeners($event = null)```
 
-Description:
+Description
 Determine if specified event name has listeners.
 
-Parameter:
+Parameter
 $event (optional): Event name (default to null)
 
-Return Value:
+Return Value
 ```true``` if specified event has any listener/listeners on it, ```false``` otherwise
 
 
 ```setListenerPriority($event, $listener, $priority)```
 
-Description:
+Description
 Set event listener priority.
 
-Parameter:
+Parameter
 $event: Event name
 $listener: Listener (callback/object)
 $priority: Event priority
 
-Return Value:
+Return Value
 none
 
 
 ```getListenerPriority($event, $listener)```
 
-Description:
+Description
 Get event listener priority.
 
-Parameter:
+Parameter
 $event: Event name
 $listener: Listener (callback/object)
 
-Return Value:
+Return Value
 Event listener priority, null otherwise.
 
 
 ```attachSubscriber(EventSubscriberInterface $subscriber)```
 
-Description:
+Description
 Register event subscriber.
 
-Parameter:
+Parameter
 Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
 
 Return Value
@@ -234,24 +234,24 @@ none
 
 ```detachSubscriber(EventSubscriberInterface $subscriber)```
 
-Description:
+Description
 Remove event subscriber.
 
-Parameter:
+Parameter
 Symfony\Component\EventDispatcher\EventSubscriberInterface $subscriber: The event subscriber
 
-Return Value:
+Return Value
 none
 
 
 ```dispatch($event, Event $eventHandler = null)```
 
-Description:
+Description
 Dispatch the specified event.
 
-Parameter:
+Parameter
 $event: Event name
 Gandung\EventDispatcher\Event $eventHandler (optional): Event handler (default to null)
 
-Return Value:
+Return Value
 An instance of Gandung\EventDispatcher\Event.
