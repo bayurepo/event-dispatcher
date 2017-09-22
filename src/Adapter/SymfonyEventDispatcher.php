@@ -5,6 +5,9 @@ namespace Gandung\EventDispatcher\Adapter;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
+/**
+ * @author Paulus Gandung Prakosa <rvn.plvhx@gmail.com>
+ */
 class SymfonyEventDispatcher implements EventDispatcherAdapterInterface
 {
     /**

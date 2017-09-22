@@ -2,6 +2,9 @@
 
 namespace Gandung\EventDispatcher;
 
+/**
+ * @author Paulus Gandung Prakosa <rvn.plvhx@gmail.com>
+ */
 interface ListenerInterface
 {
     /**

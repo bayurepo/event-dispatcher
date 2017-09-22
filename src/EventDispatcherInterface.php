@@ -4,6 +4,9 @@ namespace Gandung\EventDispatcher;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
+/**
+ * @author Paulus Gandung Prakosa <rvn.plvhx@gmail.com>
+ */
 interface EventDispatcherInterface
 {
     /**
